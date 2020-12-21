@@ -98,8 +98,6 @@ function getUrlVars() {
 const tabNumber = getUrlVars()["tab"];
 const baseEndpoint = `https://spreadsheets.google.com/feeds/cells/16sQYh3VlWS1QPMXmT6uunevztDdCtsmhFP0WpWdicgQ/${tabNumber}/public/full/`;
 const proxy = `https://cors-anywhere.herokuapp.com/`;
-//const form = document.querySelector('form.search');
-const recipesGrid = document.querySelector('.recipes');
 
 
 async function fetchData(target) {
@@ -110,9 +108,7 @@ async function fetchData(target) {
 }
 
 async function fetchTitle() {
-	
 	let targetEndpoint = `https://spreadsheets.google.com/feeds/cells/16sQYh3VlWS1QPMXmT6uunevztDdCtsmhFP0WpWdicgQ/${tabNumber}/public/full?alt=json`;
-	
 	const res = await fetch(targetEndpoint);
 	const data = await res.json();
 	
@@ -120,17 +116,14 @@ async function fetchTitle() {
 }
 
 async function getTitle() {
- 
 	const data = await fetchTitle();
 	const placeholder = document.querySelector(`#title`);
-
-	
 
 	return [data.feed.title.$t, placeholder];
 }
 
 async function getContent(target) {
- 
+
   	const data = await fetchData(target);
   	const placeholder = document.querySelector(`#${target}`);
 
