@@ -732,7 +732,7 @@ module.exports = {
 	  minWidth: [],
 	  objectFit: [],
 	  objectPosition: [],
-	  opacity: [],
+	  opacity: ['hover'],
 	  order: [],
 	  outline: [],
 	  overflow: [],

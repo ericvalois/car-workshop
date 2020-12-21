@@ -97,7 +97,8 @@ function getUrlVars() {
 
 const tabNumber = getUrlVars()["tab"];
 const baseEndpoint = `https://spreadsheets.google.com/feeds/cells/16sQYh3VlWS1QPMXmT6uunevztDdCtsmhFP0WpWdicgQ/${tabNumber}/public/full/`;
-const proxy = `https://cors-anywhere.herokuapp.com/`;
+//const proxy = `https://cors-anywhere.herokuapp.com/`;
+const proxy = ``;
 
 
 async function fetchData(target) {
@@ -137,6 +138,20 @@ function successCallback([value, placeholder]) {
 function failureCallback(error) {
 	console.error("Error: " + error);
 }
+
+const url = window.location.protocol + "//" + window.location.host + window.location.pathname + "?tab=";
+const prevTab = parseInt(tabNumber) - 1;
+const nextTab = parseInt(tabNumber) + 1;
+const pastMonth = document.querySelector('.past-month');
+const nextMonth = document.querySelector('.next-month');
+
+if(prevTab === 0){
+	pastMonth.style.display = "none";
+}else{
+	pastMonth.href = url + prevTab;
+}
+
+nextMonth.href = url + nextTab;
 
 // Get page title
 let promiseTitle = getTitle();
