@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Empty project</title>
+        <meta charset="utf-8">
+		<link rel='icon' href='../assets/img/favicon.ico' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body class="min-w-screen min-h-screen bg-gray-200 px-5 py-5 flex flex-col">
+		<a href="https://www.hondasoreltracy.com/eng/" target="_blank"><img src="../assets/img/hondasoreltracy_en.png" width="138" height="45" alt="Logo Sorel"></a>
+		
+        <!-- component -->
+		<div class="flex-auto flex items-center justify-center ">
+			<div class="w-full max-w-6xl">
+				
+				<h1 id="title" class="bold text-gray-700 mb-4 text-3xl">...</h1>
+
+				<div class="-mx-2 md:flex">
+					<div class="w-full lg:w-1/2 px-2">
+						<div class="rounded-lg shadow-sm mb-4">
+							<div class="rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden">
+								<div class="px-3 pt-8 pb-10 text-center relative z-10">
+									<h4 class="text-sm uppercase text-gray-500 leading-tight">Total neuf</h4>
+									<h3 id="R41C1" class="text-3xl text-gray-700 font-semibold leading-tight my-3">...</h3>
+									<p class="text-xs text-green-500 leading-tight">▲ 57.1%</p>
+								</div>
+								<div class="absolute bottom-0 inset-x-0">
+									<canvas id="chart1" height="70"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="w-full lg:w-1/2 px-2">
+						<div class="rounded-lg shadow-sm mb-4">
+							<div class="rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden">
+								<div class="px-3 pt-8 pb-10 text-center relative z-10">
+									<h4 class="text-sm uppercase text-gray-500 leading-tight">Total Brut</h4>
+									<h3 id="R41C3" class="text-3xl text-gray-700 font-semibold leading-tight my-3">...</h3>
+									<p class="text-xs text-red-500 leading-tight">▼ 42.8%</p>
+								</div>
+								<div class="absolute bottom-0 inset-x-0">
+									<canvas id="chart2" height="70"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="-mx-2 md:flex">
+					<div class="w-full lg:w-1/3 px-2">
+						<div class="rounded-lg shadow-sm mb-4">
+							<div class="rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden">
+								<div class="px-3 pt-8 pb-10 text-center relative z-10">
+									<h4 class="text-sm uppercase text-gray-500 leading-tight">Moyenne Front</h4>
+									<h3 id="R47C1" class="text-3xl text-gray-700 font-semibold leading-tight my-3">...</h3>
+									<p class="text-xs text-green-500 leading-tight">▲ 57.1%</p>
+								</div>
+								<div class="absolute bottom-0 inset-x-0">
+									<canvas id="chart1" height="70"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="w-full lg:w-1/3 px-2">
+						<div class="rounded-lg shadow-sm mb-4">
+							<div class="rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden">
+								<div class="px-3 pt-8 pb-10 text-center relative z-10">
+									<h4 class="text-sm uppercase text-gray-500 leading-tight">Moyenne F&I</h4>
+									<h3 id="R47C3" class="text-3xl text-gray-700 font-semibold leading-tight my-3">...</h3>
+									<div class="flex justify-center items-center leading-tight">
+										<p class="text-xs text-center leading-tight text-gray-700">Henry <span id="R53C3">...</span> <span class="text-red-500">▼ 42.8%</span></p>
+										<span class="mx-3">|</span>
+										<p class="text-xs text-center leading-tight text-gray-700">Karine <span id="R53C5">...</span> <span class="text-green-500 text-red-500">▲ 42.8%</span></p>
+									</div>
+								</div>
+								<div class="absolute bottom-0 inset-x-0">
+									<canvas id="chart2" height="70"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="w-full lg:w-1/3 px-2">
+						<div class="rounded-lg shadow-sm mb-4">
+							<div class="rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden">
+								<div class="px-3 pt-8 pb-10 text-center relative z-10">
+									<h4 class="text-sm uppercase text-gray-500 leading-tight">Moyenne Total</h4>
+									<h3 id="R47C7" class="text-3xl text-gray-700 font-semibold leading-tight my-3">...</h3>
+									<p class="text-xs text-green-500 leading-tight">▲ 8.2%</p>
+								</div>
+								<div class="absolute bottom-0 inset-x-0">
+									<canvas id="chart3" height="70"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+        <script src="index.js" defer></script>
+    </body>
+</html>
